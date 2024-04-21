@@ -1,13 +1,22 @@
 <template>
-  <div class="m-4 bg-white">
-    <p class="pb-4 text-2xl text-slate-600">這裡是最外層 app.vue</p>
+  <div v-if="rootStroe.theme">
     <NuxtLayout>
-      <p class="px-6 pt-4 text-xl text-slate-800">
-        被 NuxtLayout 包裹的元件將會放置到 Layout 的 slot 中
-      </p>
-      <NuxtPage />
+      <v-app :theme="rootStroe.theme">
+        <Header></Header>
+        <p>被 NuxtLayout 包裹的元件將會放置到 Layout 的 slot 中</p>
+        <NuxtPage />
+      </v-app>
     </NuxtLayout>
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { useRootStore } from '@/stores/root'
+
+const rootStroe = useRootStore()
+
+if (process.client) {
+  const root = JSON.parse(localStorage.getItem('root') || '{}')
+  rootStroe.theme = root.theme
+}
+</script>
