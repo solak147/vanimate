@@ -16,6 +16,6 @@ const rootStroe = useRootStore()
 
 if (process.client) {
   const root = JSON.parse(localStorage.getItem('root') || '{}')
-  rootStroe.theme = root.theme
+  rootStroe.theme = root.theme ?? 'dark'
 }
 </script>
