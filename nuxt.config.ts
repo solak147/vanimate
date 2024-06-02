@@ -1,10 +1,23 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 
+const path = require('path')
+
 export default defineNuxtConfig({
   devtools: { enabled: false },
 
   ssr: false,
+
+  nitro: {
+    output: {
+      publicDir: path.join(__dirname, 'docs')
+    }
+  },
+
+  app: {
+    baseURL: process.env.NODE_ENV === 'production' ? '/vanimate/' : '/',
+    buildAssetsDir: '/static/'
+  },
 
   build: {
     transpile: ['vuetify']
