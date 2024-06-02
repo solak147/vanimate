@@ -92,9 +92,36 @@
 
         <v-btn icon="mdi-dots-vertical"></v-btn>
 
-        <v-btn @click="toggleTheme">toggle theme</v-btn>
+        <v-btn class="my-button" @click="toggleTheme">toggle theme</v-btn>
       </template>
     </v-app-bar>
+
+    <v-app-bar :elevation="0">
+      <v-app-bar-title class="ml-0">
+        <v-tabs v-model="tab" bg-color="primary">
+          <v-tab value="one">首頁</v-tab>
+          <v-tab value="two">所有動畫</v-tab>
+          <v-tab value="three">觀看紀錄</v-tab>
+        </v-tabs>
+      </v-app-bar-title>
+    </v-app-bar>
+
+    <v-carousel show-arrows="hover" hide-delimiters class="h-100 mt-16">
+      <v-carousel-item
+        src="https://truth.bahamut.com.tw/s01/202404/f7d1489cbffe281049ce1c2014b50d87.JPG"
+        contain
+      ></v-carousel-item>
+
+      <v-carousel-item
+        src="https://truth.bahamut.com.tw/s01/202404/67dc4a269e640db0a792a777f7897d3a.JPG"
+        contain
+      ></v-carousel-item>
+
+      <v-carousel-item
+        src="https://truth.bahamut.com.tw/s01/202404/97e9c38d2f5eae6d8e624516f2e63ae6.JPG"
+        contain
+      ></v-carousel-item>
+    </v-carousel>
   </div>
 </template>
 
@@ -110,6 +137,7 @@ const rules = [
 const recently = ref(['紫羅蘭', '刀劍', '鬼滅'])
 const hot = ref(['排球少年', '排球', '史萊姆', '無職', '葬送', '為美好'])
 const menu = ref(false)
+const tab = ref(null)
 
 function toggleTheme() {
   if (rootStroe.theme === 'dark') {
@@ -120,7 +148,13 @@ function toggleTheme() {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@use '@/assets/styles/settings';
+
+.my-button {
+  height: settings.$font-size-root;
+}
+
 .logo {
   width: 80px;
   height: 40px;
