@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="" style="height: 35vh">
     <v-app-bar :elevation="0" rounded>
       <template #prepend>
         <img src="~/assets/logo.png" class="logo" />

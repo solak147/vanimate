@@ -8,15 +8,15 @@ export default defineNuxtConfig({
 
   ssr: false,
 
-  nitro: {
-    output: {
-      publicDir: path.join(__dirname, 'docs')
-    }
-  },
+  // nitro: {
+  //   output: {
+  //     publicDir: path.join(__dirname, 'docs')
+  //   }
+  // },
 
   app: {
     baseURL: process.env.NODE_ENV === 'production' ? '/vanimate/' : '/',
-    buildAssetsDir: '/static/'
+    // buildAssetsDir: '/static/'
   },
 
   build: {

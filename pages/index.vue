@@ -4,26 +4,66 @@
       <v-tab value="one">本季新翻</v-tab>
       <v-tab value="two">週期表</v-tab>
     </v-tabs>
-    <v-row>
-      <v-col class="pa-12">
-        <v-range-slider
-          :model-value="timeBar"
-          :step="1"
-          :ticks="seasons"
-          max="3"
-          min="0"
-          show-ticks="always"
-          thumb-label="always"
-          tick-size="4"
-          color="orange"
-          @end="test"
-        >
-          <template #thumb-label="{ modelValue }">
-            <v-icon :icon="season(modelValue)" theme="dark"></v-icon>
-          </template>
-        </v-range-slider>
-      </v-col>
-    </v-row>
+
+    <v-window v-model="tab">
+      <v-window-item value="one">
+        <v-row>
+          <v-col class="px-12 pt-12">
+            <v-range-slider
+              :model-value="timeBar"
+              :step="1"
+              :ticks="seasons"
+              max="3"
+              min="0"
+              show-ticks="always"
+              thumb-label="always"
+              tick-size="4"
+              color="orange"
+              @end="test"
+            >
+              <template #thumb-label="{ modelValue }">
+                <v-icon :icon="season(modelValue)" theme="dark"></v-icon>
+              </template>
+            </v-range-slider>
+          </v-col>
+        </v-row>
+
+        <v-row class="px-12">
+          <v-col>
+            <v-card
+              style="
+                height: 200px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-image: url('https://p2.bahamut.com.tw/B/2KU/53/df229f51a820b7a21c2a2f63591q6md5.JPG');
+              "
+            >
+              <div class="d-flex justify-space-between">
+                <div class="bg-grey-darken-3 ma-1 pa-1 rounded-lg">
+                  <v-icon icon="mdi-clock"></v-icon>17:30
+                </div>
+                <div class="ma-1">
+                  <v-icon icon="mdi-heart-outline" size="x-large"></v-icon>
+                </div>
+              </div>
+            </v-card>
+          </v-col>
+          <v-col>
+            <v-card> 1 </v-card>
+          </v-col>
+          <v-col>
+            <v-card> 1 </v-card>
+          </v-col>
+          <v-col>
+            <v-card> 1 </v-card>
+          </v-col>
+          <v-col>
+            <v-card> 1 </v-card>
+          </v-col>
+        </v-row>
+      </v-window-item>
+    </v-window>
   </div>
 </template>
 
