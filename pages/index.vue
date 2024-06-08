@@ -70,12 +70,14 @@
                   class="d-flex"
                   :class="{ animateTxt: i.animateTxt }"
                 >
-                  <div style="width: 200px">{{ i.title }}</div>
-
                   <div>{{ i.title }}</div>
+
+                  <div style="margin-left: 150px">{{ i.title }}</div>
                 </div>
               </div>
-              <div><v-icon icon="mdi-eye" class="mr-1"></v-icon>89萬</div>
+              <div class="text-right" style="width: 90px">
+                <v-icon icon="mdi-eye" class="mr-1"></v-icon>89萬
+              </div>
             </div>
           </v-col>
         </v-row>
@@ -87,6 +89,54 @@
         </div>
 
         <h1 class="mt-10 ml-5">近期熱播</h1>
+
+        <v-row class="px-12 mt-1">
+          <v-col>
+            <v-card
+              class="recentCard text-end"
+              :style="{
+                backgroundImage: `url(https://p2.bahamut.com.tw/B/ACG/c/02/0000129302.JPG)`
+              }"
+            >
+              <v-icon icon="mdi-heart-outline" size="x-large"></v-icon>
+              <div class="position-absolute mr-1" style="right: 0; bottom: 0">
+                <v-icon icon="mdi-eye" class="mr-1"></v-icon>89萬
+              </div>
+            </v-card>
+
+            <div class="bg-grey-darken-3 pa-1">
+              <div>怪獸 8 號</div>
+              <div class="d-flex justify-space-between align-center">
+                <div>年份：2024/04</div>
+                <div><v-chip size="small" label> 共8集 </v-chip></div>
+              </div>
+            </div>
+          </v-col>
+          <v-col>
+            <v-card
+              class="recentCard"
+              :style="{ backgroundImage: `https://p2.bahamut.com.tw/B/ACG/c/02/0000129302.JPG` }"
+            >
+              <div>1</div>
+            </v-card>
+          </v-col>
+          <v-col>
+            <v-card
+              class="recentCard"
+              :style="{ backgroundImage: `https://p2.bahamut.com.tw/B/ACG/c/02/0000129302.JPG` }"
+            >
+              <div>1</div>
+            </v-card>
+          </v-col>
+          <v-col>
+            <v-card
+              class="recentCard"
+              :style="{ backgroundImage: `https://p2.bahamut.com.tw/B/ACG/c/02/0000129302.JPG` }"
+            >
+              <div>1</div>
+            </v-card>
+          </v-col>
+        </v-row>
       </v-window-item>
     </v-window>
   </div>
@@ -100,10 +150,10 @@ const animateImg = toRef(animateCfg)
 const order = ref([{ title: '依更新日排列' }, { title: '依平均人氣排列' }])
 
 const seasons = ref({
-  0: 'Winter',
-  1: 'Spring',
-  2: 'Summer',
-  3: 'Fall'
+  0: '06/04 (二)',
+  1: '06/05 (三)',
+  2: '06/06 (四)',
+  3: '06/07 (五)'
 })
 
 const icons = ref(['mdi-snowflake', 'mdi-leaf', 'mdi-fire', 'mdi-water'])
@@ -148,5 +198,12 @@ const test = (val: Array<number>) => {
   100% {
     transform: translateX(-100%);
   }
+}
+
+.recentCard {
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 </style>
