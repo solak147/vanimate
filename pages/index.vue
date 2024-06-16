@@ -90,51 +90,33 @@
 
         <h1 class="mt-10 ml-5">近期熱播</h1>
 
-        <v-row class="px-12 mt-1">
-          <v-col>
+        <v-row v-for="(item, key) in recentCfg" :key="key" class="px-12 mt-1">
+          <v-col v-for="(i, k) in item" :key="k">
             <v-card
               class="recentCard text-end"
               :style="{
-                backgroundImage: `url(https://p2.bahamut.com.tw/B/ACG/c/02/0000129302.JPG)`
+                backgroundImage: `url(${i.img})`
               }"
             >
               <v-icon icon="mdi-heart-outline" size="x-large"></v-icon>
               <div class="position-absolute mr-1" style="right: 0; bottom: 0">
-                <v-icon icon="mdi-eye" class="mr-1"></v-icon>89萬
+                <v-icon icon="mdi-eye" class="mr-1"></v-icon>{{ i.see }}萬
               </div>
             </v-card>
 
             <div class="bg-grey-darken-3 pa-1">
-              <div>怪獸 8 號</div>
+              <div
+                style="width: 150px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis"
+              >
+                {{ i.title }}
+              </div>
               <div class="d-flex justify-space-between align-center">
-                <div>年份：2024/04</div>
-                <div><v-chip size="small" label> 共8集 </v-chip></div>
+                <div>年份：{{ i.year }}</div>
+                <div>
+                  <v-chip size="small" label> 共{{ i.episode }}集 </v-chip>
+                </div>
               </div>
             </div>
-          </v-col>
-          <v-col>
-            <v-card
-              class="recentCard"
-              :style="{ backgroundImage: `https://p2.bahamut.com.tw/B/ACG/c/02/0000129302.JPG` }"
-            >
-              <div>1</div>
-            </v-card>
-          </v-col>
-          <v-col>
-            <v-card
-              class="recentCard"
-              :style="{ backgroundImage: `https://p2.bahamut.com.tw/B/ACG/c/02/0000129302.JPG` }"
-            >
-              <div>1</div>
-            </v-card>
-          </v-col>
-          <v-col>
-            <v-card
-              class="recentCard"
-              :style="{ backgroundImage: `https://p2.bahamut.com.tw/B/ACG/c/02/0000129302.JPG` }"
-            >
-              <div>1</div>
-            </v-card>
           </v-col>
         </v-row>
       </v-window-item>
@@ -143,7 +125,7 @@
 </template>
 
 <script lang="ts" setup>
-import { animateCfg } from './config'
+import { animateCfg, recentCfg } from './config'
 
 const tab = ref(null)
 const animateImg = toRef(animateCfg)

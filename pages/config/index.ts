@@ -78,3 +78,108 @@ export const animateCfg = [
     }
   ]
 ]
+
+export const recentCfg = [
+  [
+    {
+      img: 'https://p2.bahamut.com.tw/B/ACG/c/02/0000129302.JPG',
+      title: '怪獸 8 號',
+      year: '2024/04',
+      see: '89',
+      episode: '8'
+    },
+    {
+      img: 'https://p2.bahamut.com.tw/B/ACG/c/35/0000134735.JPG',
+      title: '老夫老妻重返青春',
+      year: '2024/04',
+      see: '106.6',
+      episode: '8'
+    },
+    {
+      img: 'https://p2.bahamut.com.tw/B/ACG/c/53/0000131853.JPG',
+      title: '寶可夢地平線：系列',
+      year: '2024/03',
+      see: '2.5',
+      episode: '14'
+    },
+    {
+      img: 'https://p2.bahamut.com.tw/B/ACG/c/84/0000128484.JPG',
+      title: '轉生為第七王子，隨心所欲的魔法學習之路',
+      year: '2024/04',
+      see: '248.2',
+      episode: '11'
+    },
+    {
+      img: 'https://p2.bahamut.com.tw/B/ACG/c/16/0000133416.JPG',
+      title: '鬼滅之刃 柱訓練篇',
+      year: '2024/05',
+      see: '158.2',
+      episode: '5'
+    },
+    {
+      img: 'https://p2.bahamut.com.tw/B/ACG/c/19/0000118719.JPG',
+      title: '為美好的世界獻上祝福！3',
+      year: '2024/04',
+      see: '215.6',
+      episode: '10'
+    },
+    {
+      img: 'https://p2.bahamut.com.tw/B/ACG/c/37/0000127137.JPG',
+      title: '葬送的芙莉蓮',
+      year: '2023/09',
+      see: '1205.9',
+      episode: '28'
+    }
+  ],
+  [
+    {
+      img: 'https://p2.bahamut.com.tw/B/ACG/c/87/0000131287.JPG',
+      title: '我的英雄學院 第七季',
+      year: '2024/04',
+      see: '66.9',
+      episode: '11'
+    },
+    {
+      img: 'https://p2.bahamut.com.tw/B/ACG/c/76/0000064376.JPG',
+      title: '排球少年！！',
+      year: '2014/04',
+      see: '518.2',
+      episode: '25'
+    },
+    {
+      img: 'https://p2.bahamut.com.tw/B/ACG/c/21/0000120421.JPG',
+      title: '吉伊卡哇',
+      year: '2022/04',
+      see: '417.1',
+      episode: '120'
+    },
+    {
+      img: 'https://p2.bahamut.com.tw/B/ACG/c/61/0000134161.JPG',
+      title: '魔法科高中的劣等生 第三季',
+      year: '2024/04',
+      see: '118',
+      episode: '11'
+    },
+    {
+      img: 'https://p2.bahamut.com.tw/B/ACG/c/78/0000122778.JPG',
+      title: '咒術迴戰 第二季',
+      year: '2023/07',
+      see: '1108.6',
+      episode: '23'
+    },
+    {
+      img: 'https://p2.bahamut.com.tw/B/ACG/c/38/0000136038.JPG',
+      title: '從 Lv2 開始開外掛的前勇者候補過著悠哉異世界生活',
+      year: '2024/04',
+      see: '157.9',
+      episode: '10'
+    },
+    {
+      img: 'https://p2.bahamut.com.tw/B/ACG/c/87/0000018987.JPG',
+      title: '烏龍派出所',
+      year: '1996/06',
+      see: '1004.8',
+      episode: '341'
+    }
+  ]
+]
